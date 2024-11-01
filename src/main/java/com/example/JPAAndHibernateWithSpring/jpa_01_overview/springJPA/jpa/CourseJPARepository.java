@@ -1,6 +1,6 @@
-package com.example.JPAAndHibernateWithSpring.springJPA.jpa;
+package com.example.JPAAndHibernateWithSpring.jpa_01_overview.springJPA.jpa;
 
-import com.example.JPAAndHibernateWithSpring.springJPA.Course;
+import com.example.JPAAndHibernateWithSpring.jpa_01_overview.springJPA.Course;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;

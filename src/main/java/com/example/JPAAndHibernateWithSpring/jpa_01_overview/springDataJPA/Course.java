@@ -1,7 +1,12 @@
-package com.example.JPAAndHibernateWithSpring.springJDBC;
+package com.example.JPAAndHibernateWithSpring.jpa_01_overview.springDataJPA;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
 
+    @Id
     private long id;
     private String name;
     private String author;

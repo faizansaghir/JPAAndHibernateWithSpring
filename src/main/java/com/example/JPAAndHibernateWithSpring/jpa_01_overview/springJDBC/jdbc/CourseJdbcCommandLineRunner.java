@@ -1,6 +1,6 @@
-package com.example.JPAAndHibernateWithSpring.springJDBC.jdbc;
+package com.example.JPAAndHibernateWithSpring.jpa_01_overview.springJDBC.jdbc;
 
-import com.example.JPAAndHibernateWithSpring.springJDBC.Course;
+import com.example.JPAAndHibernateWithSpring.jpa_01_overview.springJDBC.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

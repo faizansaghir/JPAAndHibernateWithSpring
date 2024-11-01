@@ -1,6 +1,6 @@
-package com.example.JPAAndHibernateWithSpring.springDataJPA.dataJPA;
+package com.example.JPAAndHibernateWithSpring.jpa_01_overview.springDataJPA.dataJPA;
 
-import com.example.JPAAndHibernateWithSpring.springDataJPA.Course;
+import com.example.JPAAndHibernateWithSpring.jpa_01_overview.springDataJPA.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

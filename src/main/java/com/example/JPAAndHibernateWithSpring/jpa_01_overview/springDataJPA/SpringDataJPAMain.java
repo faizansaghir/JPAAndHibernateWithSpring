@@ -1,4 +1,4 @@
-package com.example.JPAAndHibernateWithSpring.springDataJPA;
+package com.example.JPAAndHibernateWithSpring.jpa_01_overview.springDataJPA;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

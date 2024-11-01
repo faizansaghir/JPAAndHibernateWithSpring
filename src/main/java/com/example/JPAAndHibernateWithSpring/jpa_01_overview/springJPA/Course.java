@@ -1,4 +1,4 @@
-package com.example.JPAAndHibernateWithSpring.springDataJPA;
+package com.example.JPAAndHibernateWithSpring.jpa_01_overview.springJPA;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
