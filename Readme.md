@@ -14,3 +14,6 @@
     &emsp;b. Your code is not tied to vendor-specific implementation, thus making it flexible and loosely coupled. <br><br>
 3. <strong>JPA, Hibernate and JDBC</strong> <br>
     ![JPA, Hibernate and JDBC](./img/jpaHibernateAndJDBC.PNG?raw=true "JPAHibernateAndJDBC") <br><br>
+4. <strong>CommandLineRunner Interface</strong> <br>
+    An instance that implements CommandLineRunner in SpringBoot application needs to implement <em>run</em> method. <br>
+    The <em>run</em> method is executed once SpringBoot application starts and bean constructions are completed
