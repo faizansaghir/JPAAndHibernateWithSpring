@@ -13,4 +13,4 @@
     &emsp;a. You can switch implementation if you face some problem in a particular vendor-implementation. <br>
     &emsp;b. Your code is not tied to vendor-specific implementation, thus making it flexible and loosely coupled. <br><br>
 3. <strong>JPA, Hibernate and JDBC</strong> <br>
-    ![JPA, Hibernate and JDBC](./img/jpaHibernateAndJDBC.png?raw=true "JPAHibernateAndJDBC") <br><br>
+    ![JPA, Hibernate and JDBC](./img/jpaHibernateAndJDBC.PNG?raw=true "JPAHibernateAndJDBC") <br><br>
