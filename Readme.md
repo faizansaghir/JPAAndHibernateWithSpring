@@ -39,3 +39,42 @@
         spring.sql.init.platform=h2
    
         <em>Note: spring.sql.init.platform tells spring which schema-${platform}.sql and data-${platform}.sql file to run</em> </pre><br>
+6. <strong>@Entity</strong> <br>
+    An entity is a Java class that is mapped to a table in database. <br>
+    An entity class must have a public or protected no-argument constructor in addition to any other constructor. <br><br>
+7. <strong>@Table</strong> <br>
+   Annotation to tell Spring which table the entity is mapped to. <br>
+    If the annotation is not provided, Spring assumes the Entity is mapped to Table with name same as that of the class. <br><br>
+    <em>Note: Camel case is replaced with snake case during naming. eg: firstName will map to first_name</em> <br>
+    <pre>Example:
+        @Entity
+        @Table(name="student")
+        public class Student {
+            ...
+        } </pre><br>
+8. <strong>@Id</strong> <br>
+    Annotation to tell Spring that a field is Primary key of the table the Entity is mapped to. <br><br>
+9. <strong>@GeneratedValue</strong> <br>
+    Annotation to tell Spring that the field value is generated using some Generation strategy. <br>
+   <pre>Example:
+            @Entity
+            @Table(name="student")
+            public class Student {
+                @Id
+                @GeneratedValue(strategy = GenerationType.IDENTITY)
+                int id;
+                ...
+            } </pre><br>
+10. <strong>@Column</strong> <br>
+    Annotation to tell Spring which column the field is mapped to. <br>
+    If the annotation is not provided, Spring assumes the Field is mapped to Column with name same as that of the field. <br>
+   <pre>Example:
+            @Entity
+            @Table(name="student")
+            public class Student {
+                @Id
+                @GeneratedValue(strategy = GenerationType.IDENTITY)
+                @Column(name = "id")
+                int id;
+                ...
+            } </pre><br>
