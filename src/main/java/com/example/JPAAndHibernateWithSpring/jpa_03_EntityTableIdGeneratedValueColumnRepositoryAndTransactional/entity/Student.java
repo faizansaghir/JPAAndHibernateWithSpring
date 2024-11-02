@@ -1,4 +1,4 @@
-package com.example.JPAAndHibernateWithSpring.jpa_03_EntityTableIdGeneratedValueAndColumn.entity;
+package com.example.JPAAndHibernateWithSpring.jpa_03_EntityTableIdGeneratedValueColumnRepositoryAndTransactional.entity;
 
 import jakarta.persistence.*;
 

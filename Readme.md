@@ -93,3 +93,10 @@
     If one needs to have low-level-control and flexibility, 
         like writing custom, complex queries or work with stored procedures then use EntityManager. <br>
     If one wants high-level of abstraction, then use JPARepository. <br><br>
+14. <strong>@Repository</strong> <br>
+    Annotation to tell Spring a call is a component of repository type. <br>
+    The repository annotation translates JDBC exceptions. <br><br>
+15. <strong>@Transactional</strong> <br>
+    Annotation to tell Spring that <br>
+    &emsp;a. All methods are transactional if annotated at class level
+    &emsp;b. The method is transactional if annotated at function level
