@@ -16,4 +16,26 @@
     ![JPA, Hibernate and JDBC](./img/jpaHibernateAndJDBC.PNG?raw=true "JPAHibernateAndJDBC") <br><br>
 4. <strong>CommandLineRunner Interface</strong> <br>
     An instance that implements CommandLineRunner in SpringBoot application needs to implement <em>run</em> method. <br>
-    The <em>run</em> method is executed once SpringBoot application starts and bean constructions are completed
+    The <em>run</em> method is executed once SpringBoot application starts and bean constructions are completed <br><br>
+5. <strong>Startup SQL queries in SpringBoot</strong> <br>
+    &emsp;a. When a SpringBoot application starts, if it has an in-memory database configured, 
+        it will run "data.sql" and "schema.sql" by default. We should create schemas or tables in "schema.sql", 
+        while we should populate-data into an existing table in "data.sql". <br>
+    &emsp;b. If we have a database confirgured that is not an in-memory database, 
+        we can enable SQL script to run by setting the properties in application.properties file.
+    <pre>Example:
+        # To enable SQl script to run always irrespective of database type
+        spring.sql.init.mode=always
+        
+        # For MySQL Database
+        spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
+        spring.datasource.username=springstudent
+        spring.datasource.password=springstudent
+        spring.sql.init.platform=mysql
+        
+        # For H2 Database
+        spring.h2.console.enabled=true
+        spring.datasource.url=jdbc:h2:mem:testdb
+        spring.sql.init.platform=h2
+   
+        <em>Note: spring.sql.init.platform tells spring which schema-${platform}.sql and data-${platform}.sql file to run</em> </pre><br>
