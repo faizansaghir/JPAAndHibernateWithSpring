@@ -65,6 +65,7 @@
                 int id;
                 ...
             } </pre><br>
+   ![Generation Strategies](./img/generationStrategies.PNG?raw=true "GenerationStrategies") <br><br>
 10. <strong>@Column</strong> <br>
     Annotation to tell Spring which column the field is mapped to. <br>
     If the annotation is not provided, Spring assumes the Field is mapped to Column with name same as that of the field. <br>
@@ -78,3 +79,17 @@
                 int id;
                 ...
             } </pre><br>
+11. <strong>Data Access Object(DAO)</strong> <br>
+    It is the most common architecture for communicating with databases. <br>
+    ![DAO Design Pattern](./img/daoDesignPattern.PNG?raw=true "DAODesignPattern") <br>
+    The DAO instance requires an EntityManager to communicate with Database. <br>
+    The EntityManager needs other dependencies like DataSource. <br>
+    The DataSource is provided by Spring based on our configuration in application.properties file <br>
+    ![Spring DAO Dependencies](./img/springDAODependencies.PNG?raw=true "SpringDAODependencies") <br><br> 
+12. <strong>JPA Repository</strong> <br>
+    Interface which must be extended in any EntityRepository eg: StudentJPARepository interface. <br>
+    This interface then can be used to perform basic CRUD operations on the entity. <br><br>
+13. <strong>JPARepository vs DAO and EntityManager</strong> <br>
+    If one needs to have low-level-control and flexibility, 
+        like writing custom, complex queries or work with stored procedures then use EntityManager. <br>
+    If one wants high-level of abstraction, then use JPARepository. <br><br>
