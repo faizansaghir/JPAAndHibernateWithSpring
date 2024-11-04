@@ -19,11 +19,21 @@ public class JPQLAndHQLMain {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return arg -> {
             queryForStudents(studentDAO);
+            queryForStudentsByLastName(studentDAO);
         };
+    }
+
+    private void queryForStudentsByLastName(StudentDAO studentDAO) {
+        List<Student> students = studentDAO.findByLastName("Saghir");
+        System.out.println("All student(s) in Student table with last name: Saghir");
+        for(Student student:students) {
+            System.out.println(student);
+        }
     }
 
     private void queryForStudents(StudentDAO studentDAO) {
         List<Student> students = studentDAO.findAll();
+        System.out.println("All student(s) in Student table");
         for(Student student:students) {
             System.out.println(student);
         }
