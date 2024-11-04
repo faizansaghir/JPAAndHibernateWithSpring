@@ -99,4 +99,18 @@
 15. <strong>@Transactional</strong> <br>
     Annotation to tell Spring that <br>
     &emsp;a. All methods are transactional if annotated at class level
-    &emsp;b. The method is transactional if annotated at function level
+    &emsp;b. The method is transactional if annotated at function level. <br><br>
+16. <strong>JPQL(JPA Query Language)</strong> <br>
+    Similar to SQL query language, here we use entity name and entity field instead of table name and column name. <br>
+    <pre>Example:
+        public List&lt;Student&gt; findAll() {
+            TypedQuery&lt;Student&gt; fromStudent = entityManager.createQuery("FROM Student", Student.class);
+            return fromStudent.getResultList();
+        }
+    
+        public List&lt;Student&gt; findAllSort() {
+            TypedQuery&lt;Student&gt; fromStudent = entityManager.createQuery("SELECT s FROM Student s ORDER BY lastName", Student.class);
+            return fromStudent.getResultList();
+        } 
+    
+        <em>Note: SELECT s is optional in HQL as it gives us the flexibility, but it is mandatory in JPQL</em> </pre><br>
