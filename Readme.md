@@ -113,4 +113,13 @@
             return fromStudent.getResultList();
         } 
     
-        <em>Note: SELECT s is optional in HQL as it gives us the flexibility, but it is mandatory in JPQL</em> </pre><br>
+        <em>Note: SELECT s is optional in HQL as it gives us the flexibility, but it is mandatory in JPQL</em> </pre>
+    We can also have named parameters in query i.e. placeholders
+    <pre>Example: 
+        public List&lt;Student&gt; findByLastName(String theLastName) {
+            TypedQuery&lt;Student&gt; fromStudent = entityManager.createQuery(
+                    "FROM Student WHERE lastName=:theLastName", Student.class
+            );
+            fromStudent.setParameter("theLastName", theLastName);
+            return fromStudent.getResultList();
+        } </pre><br>
