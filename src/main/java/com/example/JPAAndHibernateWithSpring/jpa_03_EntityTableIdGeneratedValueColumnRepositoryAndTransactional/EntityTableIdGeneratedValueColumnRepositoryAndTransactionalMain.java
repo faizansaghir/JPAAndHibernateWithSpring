@@ -16,9 +16,26 @@ public class EntityTableIdGeneratedValueColumnRepositoryAndTransactionalMain {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return arg -> {
-            createStudent(studentDAO);
+//            createStudent(studentDAO);
+            createAndReadStudent(studentDAO);
         };
     }
+
+    private void createAndReadStudent(StudentDAO studentDAO) {
+        System.out.println("Creating new student...");
+        Student student = new Student("Rose", "Gold", "rose.gold@gmail.com");
+
+        System.out.println("Saving new student...");
+        studentDAO.save(student);
+
+        System.out.println(STR."Id of new student: \{student.getId()}");
+
+        System.out.println(STR."Retrieving student with id: \{student.getId()}");
+        Student retrievedStudent = studentDAO.findById(student.getId());
+
+        System.out.println(STR."Retrieved student: \{student}");
+    }
+
 
     private void createStudent(StudentDAO studentDAO) {
         System.out.println("Creating new student...");

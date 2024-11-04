@@ -4,4 +4,6 @@ import com.example.JPAAndHibernateWithSpring.jpa_03_EntityTableIdGeneratedValueC
 
 public interface StudentDAO {
     void save(Student student);
+
+    Student findById(Integer id);
 }
