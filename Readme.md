@@ -122,7 +122,7 @@
             );
             fromStudent.setParameter("theLastName", theLastName);
             return fromStudent.getResultList();
-        } </pre><br>
+        } </pre>
     For queries that do not return any result, rather they perform some update on database, we use executeUpdate method
     <pre>Example:
         @Override
