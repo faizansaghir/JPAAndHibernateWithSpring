@@ -123,3 +123,16 @@
             fromStudent.setParameter("theLastName", theLastName);
             return fromStudent.getResultList();
         } </pre><br>
+    For queries that do not return any result, rather they perform some update on database, we use executeUpdate method
+    <pre>Example:
+        @Override
+        @Transactional
+        public void deleteHql(Integer studentId) {
+            entityManager.createQuery(
+                    "DELETE FROM Student WHERE id=:studentId"
+            ).setParameter(
+                    "studentId", studentId
+            ).executeUpdate();
+        } 
+    
+        <em>Note: @Transactional annotation is needed as it does some changes to database</em> </pre><br>
