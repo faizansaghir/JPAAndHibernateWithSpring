@@ -140,5 +140,11 @@
     To see the SQL queries being executed: <br>
     &emsp;a. logging.level.org.hibernate.SQL=debug <br>
     &emsp;b. spring.jpa.show-sql=true <br>
-    To see the binding that happens for SQL queries: <br>   
+    To see the binding that happens for SQL queries:    
     &emsp;a. logging.level.org.hibernate.orm.jdbc.bind=trace <br><br>
+18. <strong>Data Definition Language in Hibernate and JPA</strong> <br>
+    We can select different options for DDL on startup for our Spring application. <br>
+    ![DDL Configuration](./img/ddlCOnfiguration.PNG?raw=true "DDLConfiguration") <br>
+    We can update this property in application.properties file
+    <pre>Example:
+        spring.jpa.hibernate.ddl-auto=create</pre>
