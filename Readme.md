@@ -144,7 +144,7 @@
     &emsp;a. logging.level.org.hibernate.orm.jdbc.bind=trace <br><br>
 18. <strong>Data Definition Language in Hibernate and JPA</strong> <br>
     We can select different options for DDL on startup for our Spring application. <br>
-    ![DDL Configuration](./img/ddlCOnfiguration.PNG?raw=true "DDLConfiguration") <br>
+    ![DDL Configuration](./img/ddlConfiguration.PNG?raw=true "DDLConfiguration") <br>
     We can update this property in application.properties file
     <pre>Example:
         spring.jpa.hibernate.ddl-auto=create</pre>
