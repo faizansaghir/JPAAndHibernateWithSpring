@@ -136,3 +136,9 @@
         } 
     
         <em>Note: @Transactional annotation is needed as it does some changes to database</em> </pre><br>
+17. <strong>SQL Queries Executed in JPA</strong> <br>
+    To see the SQL queries being executed: <br>
+    &emsp;a. logging.level.org.hibernate.SQL=debug <br>
+    &emsp;b. spring.jpa.show-sql=true <br>
+    To see the binding that happens for SQL queries: <br>   
+    &emsp;a. logging.level.org.hibernate.orm.jdbc.bind=trace <br><br>
